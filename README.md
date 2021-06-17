@@ -11,7 +11,7 @@ LFI Suite is a totally <b>automatic</b> tool able to scan and exploit Local File
 * * * 
 Now a days we are facing a big problem that is,when we try to user lfisuit tool in our kali machine(version 2020 or 2021) we can see "ImportError: no module named termcolor".That why we can't use this tool in our kali machine.I will give yo some soluation for that.
 
-step 1:Check your python version>>python --version(not python3 --version) or also you can check how many version of python do you have in your kali machine for that you can execute these command>>cd /usr/lib then>>ls | grep -i python
+step 1:Check your python version>>python --version(not python3 --version) or also you can check how many version of python do you have in your kali machine for that you can execute these command>>cd /usr/lib <br>then>>ls | grep -i python
 
 Now you can see how many version of python do you have in your kali machine.
 
