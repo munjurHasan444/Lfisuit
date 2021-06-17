@@ -1,7 +1,4 @@
-![Version 1.13](https://img.shields.io/badge/Version-1.13-green.svg)
-![Python 2.7.x](https://img.shields.io/badge/Python-2.7.x-yellow.svg)
-[![GPLv3 License](https://img.shields.io/badge/License-GPLv3-red.svg)](https://github.com/D35m0nd142/LFISuite/blob/master/COPYING.GPL)
-[![Twitter](https://img.shields.io/badge/Twitter-%40d35m0nd142-blue.svg)](https://www.twitter.com/d35m0nd142)
+
 
 # LFI Suite
 
@@ -12,50 +9,24 @@
 LFI Suite is a totally <b>automatic</b> tool able to scan and exploit Local File Inclusion vulnerabilities using many different methods of attack, listed in the section `Features`.
 
 * * * 
+Now a days we are facing a big problem that is,when we try to user lfisuit tool in our kali machine(version 2020 or 2021) we can see "ImportError: no module named termcolor".That why we can't use this tool in our kali machine.I will give yo some soluation for that.
 
-<h3> Features </h3>
+step 1:Check your python version>>python --version(not python3 --version) or also you can check how many version of python do you have in your kali machine for that you can execute these command>>cd /usr/lib then>>ls | grep -i python
 
-* Works with Windows, Linux and OS X
-* Automatic Configuration 
-* Automatic Update
-* Provides 8 different Local File Inclusion attack modalities:
-  - /proc/self/environ
-  - php://filter
-  - php://input
-  - /proc/self/fd
-  - access log
-  - phpinfo
-  - data://
-  - expect://
+Now you can see how many version of python do you have in your kali machine.
 
-* Provides a ninth modality, called <b>Auto-Hack</b>, which scans and exploits the target automatically by trying all the attacks one after the other without you having to do anything (except for providing, at the beginning, a list of paths to scan, which if you don't have you can find in this project directory in two versions, small and huge). 
-* Tor proxy support
-* Reverse Shell for Windows, Linux and OS X
+step 2:If you have Python 2 and 3 installed, specify it, as pip works for Python2, and pip3 works for Python 3:>>>>>>>>>>pip3 install termcolor
 
+step 3:If you have only Python3, or in simple words only one version of Python You will execute the command>>pip install termcolor
 
-<h3> How to use it? </h3>
+step 4:if step 2 and step 3 falied for you,this is the final step and I think it will work 100%.if you already have termcolor installed to Python3.x(means 3.1,3.2,3.3....). Simply just copy the termcolor.py file from /usr/lib/python3/dist-packages to /usr/lib/python2.x(means 2.1,2.2,2.3...check step 1)
 
-Usage is extremely simple and LFI Suite has an easy-to-use user interface; just run it and let it lead you.
-##### Reverse Shell
-When you got a LFI shell by using one of the available attacks, you can easily obtain a reverse shell by entering the command <b>"reverseshell"</b> (obviously you must put your system listening for the reverse connection, for instance using <b>"nc -lvp port"</b>).
+Example:For my cases,step 1:python --version Python 2.7.18
 
-<h3> Dependencies </h3>
-
-* Python <b>2.7</b>.x
-* Python extra modules: termcolor, requests
-* socks.py 
-
-> When you run the script, in case you are missing some modules, it will check if you have <b>pip</b> installed and, in case you don't, it will install it <b>automatically</b>, then using pip it will install also the missing modules and download the necessary file <b>socks.py</b>.<br>I tried it on different operating systems (Debian,Ubuntu,Fedora,Windows 10,OS X) and it worked great, but if something strange happens to you and the automatic installation of pip and other modules fails, please install missing modules manually and re-run the script.
-<br>![#f03c15](https://placehold.it/15/f03c15/000000?text=+) <b>IMPORTANT: In order to allow the script to install missing modules (and in case pip) automatically, you MUST run the script as root (or, at least, with sufficient permissions) the first time.</b>
-
-<h3> Collaboration </h3>
-
-LFI Suite already contains a lot of features but, as you probably know, there are plenty of other possible attacks still to implement.
-If you are a Python programmer/Penetration tester and you want to join this project in order to improve it and extend it, please contact me at <<b>d35m0nd142@gmail.com</b>> or directly here.
-
-<h3> Disclaimer </h3>
-
-I am not responsible for any kind of illegal acts you cause. This is meant to be used for ethical purposes by penetration testers. If you plan to copy, redistribute please give credits to the original author.
-
-Video: https://www.youtube.com/watch?v=6sY1Skx8MBc <br>
-Follow me: <b>https://twitter.com/d35m0nd142</b>
+                  step 2:pip3 install termcolor
+                  Requirement already satisfied
+                  
+                  step 3:Now qualified,because i have installed python version 2.7.18 and Python 3.9.2
+                  
+                  step 4:sudo cp termcolor.py /usr/lib/python3/dist-packages /usr/lib/python2.7
+Then run the command >>python lfisuit.py I think your problem is solved.
