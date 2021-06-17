@@ -21,7 +21,7 @@ step 3:If you have only Python3, or in simple words only one version of Python Y
 
 step 4:if step 2 and step 3 falied for you,this is the final step and I think it will work 100%.if you already have termcolor installed to Python3.x(means 3.1,3.2,3.3....). Simply just copy the termcolor.py file from /usr/lib/python3/dist-packages to /usr/lib/python2.x(means 2.1,2.2,2.3...check step 1)
 
-Example:For my cases,step 1:python --version 
+Example:For my cases,step 1:python --version <br>
                             Python 2.7.18
 
                   step 2:pip3 install termcolor
