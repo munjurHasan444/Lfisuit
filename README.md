@@ -30,4 +30,4 @@ Example:For my cases,step 1:python --version <br>
                   step 3:Now qualified,because i have installed python version 2.7.18 and Python 3.9.2
                   
                   step 4:sudo cp /usr/lib/python3/dist-packages/termcolor.py /usr/lib/python2.7
-Then run the command >>python lfisuit.py I think your problem is solved.
+Then run the command >>python lfisuite.py I think your problem is solved.
